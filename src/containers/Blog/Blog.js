@@ -8,6 +8,7 @@ class Blog extends Component{
         return (
             < div className = 'Blog' >
                 <h1>Blog Directions</h1>
+
                 <nav>
                     <ul>
                         <li><NavLink
@@ -25,6 +26,10 @@ class Blog extends Component{
                         }}>New Post</NavLink></li>
                     </ul>
                 </nav>
+                <Switch>
+                    {<Route path="/new-post" component={NewPost} />}
+                    <Route render={() => <h1>Click to get posts</h1>}/>
+                </Switch>
             </div>
         );
     }
